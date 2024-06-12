@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--BannerLayout-->
+    <dimen name="default_recycler_banner_itemSpace">10dp</dimen>
+    <dimen name="default_recycler_banner_indicatorSize">8dp</dimen>
+    <dimen name="default_recycler_banner_indicatorSize_Radius">3dp</dimen>
+    <dimen name="default_recycler_banner_indicatorSpace">4dp</dimen>
+    <dimen name="default_recycler_banner_indicatorMarginLeft">0dp</dimen>
+    <dimen name="default_recycler_banner_indicatorMarginRight">0dp</dimen>
+    <dimen name="default_recycler_banner_indicatorMarginBottom">3dp</dimen>
+    <dimen name="default_navigation_bar_itemSize">22dp</dimen>
+    <dimen name="default_navigation_bar_item_topMargin">7dp</dimen>
+    <dimen name="default_navigation_bar_item_titleMarginTop">2dp</dimen>
+</resources>

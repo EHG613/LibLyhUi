@@ -1,0 +1,4 @@
+<resources>
+    <!--默认字体路径-->
+    <string name="default_app_font_path"></string>
+</resources>

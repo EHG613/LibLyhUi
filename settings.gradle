@@ -1,0 +1,27 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        maven { url "https://jitpack.io" }
+        maven {
+            credentials {
+                username = '6035f369a8eb39baa4f517d9'
+                password = 'yAi_ALza8KAK'
+            }
+
+            url = 'https://packages.aliyun.com/maven/repository/2078561-release-Nos0ft/'
+        }
+        maven {
+            credentials {
+                username = '6035f369a8eb39baa4f517d9'
+                password = 'yAi_ALza8KAK'
+            }
+            url = 'https://packages.aliyun.com/maven/repository/2078561-snapshot-GTz66a/'
+        }
+    }
+}
+rootProject.name = "LibLyhUi"
+include ':app'
+include ':lib_ui'

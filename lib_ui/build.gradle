@@ -1,0 +1,15 @@
+ext.module_group = "net.liangyihui.android"
+ext.module_name = "ui"
+
+apply from: rootProject.file("gradle/android_library_config.gradle")
+
+dependencies {
+    implementation deps.kotlin.stdlib8
+    implementation deps.androidx.appcompat
+    implementation deps.google_material
+    implementation deps.androidx.constraint
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.ext_junit
+    androidTestImplementation deps.test.espresso_core
+    api deps.sheets_core
+}

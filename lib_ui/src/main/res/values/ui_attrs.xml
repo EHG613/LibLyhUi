@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NavigationBar">
+        <attr name="nb_textSize" format="dimension" />
+        <attr name="nb_textSelectColor" format="color" />
+        <attr name="nb_textUnselectColor" format="color" />
+    </declare-styleable>
+
+    <!--FlowTagLayout-->
+    <declare-styleable name="FlowTagLayout">
+        <!--选择模式，默认不可选-->
+        <attr name="ftl_check_mode" format="enum">
+            <!--不可选择-->
+            <enum name="none" value="0" />
+            <!--单选-->
+            <enum name="single" value="1" />
+            <!--多选-->
+            <enum name="multi" value="2" />
+            <!--只是展示-->
+            <enum name="display" value="3" />
+        </attr>
+        <!-- 流标签的可选项  -->
+        <attr name="ftl_entries" format="reference" />
+        <!-- 流标签默认的已选项索引  -->
+        <attr name="ftl_selecteds" format="reference" />
+        <!-- 单选模式下选中是否可取消，默认是false  -->
+        <attr name="ftl_single_cancelable" format="boolean" />
+    </declare-styleable>
+    <!--===============================TextView======================================-->
+    <!-- MarqueeView -->
+    <declare-styleable name="MarqueeView">
+        <!--翻页的间隔-->
+        <attr name="mq_interval" format="integer" />
+        <!--动画的间隔-->
+        <attr name="mq_animDuration" format="integer" />
+        <!--动画的样式资源-->
+        <attr name="mq_animIn" format="reference" />
+        <attr name="mq_animOut" format="reference" />
+    </declare-styleable>
+
+    <!-- MarqueeTextView -->
+    <declare-styleable name="MarqueeTextView">
+        <!--尺寸是否自适应， 默认false-->
+        <attr name="mtv_isAutoFit" format="boolean" />
+        <!--控件是否自动显示与隐藏（根据显示数量）， 默认false-->
+        <attr name="mtv_isAutoDisplay" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="BannerLayout">
+        <!--轮播间隔，单位ms，默认是4000ms-->
+        <attr name="bl_interval" format="integer" />
+        <!--是否显示轮播索引，默认是true-->
+        <attr name="bl_showIndicator" format="boolean" />
+        <!--轮播的方向，默认是horizontal-->
+        <attr name="bl_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <!--是否是自动轮播，默认是true-->
+        <attr name="bl_autoPlaying" format="boolean" />
+        <!--轮播索引选中的效果-->
+        <attr name="bl_indicatorSelectedSrc" format="reference" />
+        <!--轮播索引未选中的效果-->
+        <attr name="bl_indicatorUnselectedSrc" format="reference" />
+        <!--轮播索引的大小，默认5dp-->
+        <attr name="bl_indicatorSize" format="dimension" />
+        <!--轮播索引选中的颜色-->
+        <attr name="bl_indicatorSelectedColor" format="color" />
+        <!--轮播索引未选中的颜色-->
+        <attr name="bl_indicatorUnselectedColor" format="color" />
+        <!--索引器之间的间隔，默认4dp-->
+        <attr name="bl_indicatorSpace" format="dimension" />
+        <!--索引器的左侧边距，默认16dp-->
+        <attr name="bl_indicatorMarginLeft" format="dimension" />
+        <!--索引器的右侧边距，默认0dp-->
+        <attr name="bl_indicatorMarginRight" format="dimension" />
+        <!--索引器的底部边距，默认11dp-->
+        <attr name="bl_indicatorMarginBottom" format="dimension" />
+        <!--索引器的对齐方式，默认left-->
+        <attr name="bl_indicatorGravity" format="enum">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <!--轮播图之间的间距，默认是10dp-->
+        <attr name="bl_itemSpace" format="dimension" />
+        <!--图片缩放系数，默认是1.2F-->
+        <attr name="bl_centerScale" format="float" />
+        <!--轮播速度，默认是1.0F-->
+        <attr name="bl_moveSpeed" format="float" />
+    </declare-styleable>
+    <attr name="BannerLayoutStyle" format="integer" />
+    <declare-styleable name="SwitchView">
+        <!--文字选中颜色，默认是黑色-->
+        <attr name="sv_selectedTextColor" format="color" />
+        <!--文字未选中颜色，默认是黑色-->
+        <attr name="sv_unselectedTextColor" format="color" />
+        <attr name="sv_slideColor" format="color" />
+        <attr name="sv_bgColor" format="color" />
+        <!--文字大小，默认是12sp-->
+        <attr name="sv_textSize" format="dimension" />
+        <!--按钮文字列表-->
+        <attr name="sv_texts" format="reference" />
+        <!--文字padding-->
+        <attr name="sv_padding" format="dimension" />
+        <attr name="sv_interval" format="integer" />
+    </declare-styleable>
+
+    <item name="navi_bar_item_iv" type="id" />
+    <item name="navi_bar_item_title" type="id" />
+    <item name="navi_bar_item_msg_tip" type="id" />
+    <declare-styleable name="NavigationBarMsgView">
+        <!-- 圆角矩形背景色 -->
+        <attr name="mv_backgroundColor" format="color"/>
+        <!-- 圆角弧度,单位dp-->
+        <attr name="mv_cornerRadius" format="dimension"/>
+        <!-- 圆角弧度,单位dp-->
+        <attr name="mv_strokeWidth" format="dimension"/>
+        <!-- 圆角边框颜色-->
+        <attr name="mv_strokeColor" format="color"/>
+        <!-- 圆角弧度是高度一半-->
+        <attr name="mv_isRadiusHalfHeight" format="boolean"/>
+        <!-- 圆角矩形宽高相等,取较宽高中大值-->
+        <attr name="mv_isWidthHeightEqual" format="boolean"/>
+    </declare-styleable>
+</resources>

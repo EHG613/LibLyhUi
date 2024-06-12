@@ -1,0 +1,55 @@
+ext.versions = [
+        min_sdk             : 21,
+        target_sdk          : 31,
+        compile_sdk         : 31,
+        build_tools         : "31.0.0",
+        release_version_code: 1,
+        release_version     : "1.0",
+]
+
+ext.deps = [
+
+        gradle_plugins : [
+                android: "com.android.tools.build:gradle:7.0.4",
+                fat_aar: "com.github.kezong:fat-aar:1.3.6",
+                kotlin: "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30",
+                versions: "com.github.ben-manes:gradle-versions-plugin:0.27.0"
+        ],
+
+        androidx       : [
+                constraint   : "androidx.constraintlayout:constraintlayout:2.1.3",
+                annotations  : "androidx.annotation:annotation:1.3.0",
+                appcompat         : "androidx.appcompat:appcompat:1.4.1",
+                lifecycle    : [
+                        runtime : "androidx.lifecycle:lifecycle-runtime:2.2.0",
+                        compiler: "androidx.lifecycle:lifecycle-compiler:2.2.0"
+                ],
+                preference   : "androidx.preference:preference-ktx:1.2.0",
+                recycler_view: "androidx.recyclerview:recyclerview:1.2.1",
+                navigation_fragment: "androidx.navigation:navigation-fragment:2.3.5",
+                navigation_ui: "androidx.navigation:navigation-ui:2.3.5"
+        ],
+
+        google_material: "com.google.android.material:material:1.5.0",
+        google_gson: "com.google.code.gson:gson:2.8.6",
+        sheets_core: "com.maxkeppeler.sheets:core:2.2.7",
+        wechat_helper: "com.github.EHG613:WeChatHelper:1.2.6",
+        imsdk_plus: "com.tencent.imsdk:imsdk-plus:6.5.2816",
+        gson: "com.google.code.gson:gson:2.9.1",
+        gons_factory: "com.github.getActivity:GsonFactory:6.3",
+
+        kotlin         : [
+                stdlib8   : "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
+                coroutines: [
+                        android: "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
+                ]
+        ],
+
+        test:[
+                junit: "junit:junit:4.13.2",
+                ext_junit: "androidx.test.ext:junit:1.1.3",
+                espresso_core: "androidx.test.espresso:espresso-core:3.4.0"
+        ]
+
+
+]

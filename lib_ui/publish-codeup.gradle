@@ -1,0 +1,74 @@
+apply plugin: 'maven-publish'
+//引入自定义插件，插件名与前面的*.properties文件的文件名是一致的
+//apply plugin: 'net.liangyihui.net.deps'
+group 'net.liangyihui.android'
+def env = System.getProperty("env", "dev")
+if (env == 'prd') {
+    version VERSION_UI
+} else {
+    version VERSION_UI_SNAPSHOT + '-SNAPSHOT'
+}
+
+def artifactIdStr = 'ui'
+//打包main目录下代码和资源的 task
+task sourcesJar(type: Jar) {
+    archiveClassifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = "$project.group"
+                artifactId = "$artifactIdStr"
+                version = "$project.version"
+                from components.release
+                artifact sourcesJar
+//
+//            pom {
+//                name = 'My Library'
+//                description = 'A description of my library'
+//            }
+            }
+        }
+        repositories {
+            maven {
+                credentials {
+                    username = '6035f369a8eb39baa4f517d9'
+                    password = 'yAi_ALza8KAK'
+                }
+                def releasesRepoUrl = 'https://packages.aliyun.com/maven/repository/2078561-release-Nos0ft/'
+                def snapshotsRepoUrl = 'https://packages.aliyun.com/maven/repository/2078561-snapshot-GTz66a/'
+                url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            }
+        }
+    }
+}
+//gradle 7.0之前版本配置
+//apply plugin: 'maven'
+//group 'net.liangyihui.android.third'
+////version '4.0.2'
+//version '4.0.2-SNAPSHOT'
+//def artifactId = 'ywx-sdk'
+
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            repository(url: 'https://packages.aliyun.com/maven/repository/2078561-release-Nos0ft/') {
+//                authentication(
+//                        userName: '6035f369a8eb39baa4f517d9',
+//                        password: 'yAi_ALza8KAK'
+//                )
+//            }
+//            snapshotRepository(url: 'https://packages.aliyun.com/maven/repository/2078561-snapshot-GTz66a/') {
+//                authentication(
+//                        userName: '6035f369a8eb39baa4f517d9',
+//                        password: 'yAi_ALza8KAK'
+//                )
+//            }
+//            pom.version = "$project.version"
+//            pom.artifactId = "$artifactId"
+//            pom.groupId = "$project.group"
+//        }
+//    }
+//}
